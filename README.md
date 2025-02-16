@@ -42,6 +42,5 @@ Caso queira executar localmente, siga os passos:
 4. Acesse no navegador: `http://localhost:5000`
 
 ---
-
-Projeto desenvolvido como parte de um desafio técnico para a empresa Bliss.
+desenvolvido como parte de um desafio da empresa Bliss.
 Erick Rene Vieira Passetti
