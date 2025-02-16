@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Este sistema foi desenvolvido para gerenciar o inventário de computadores de uma organização. Ele permite cadastrar, editar, listar e excluir registros de computadores, facilitando o controle e a gestão dos equipamentos.
+Este sistema foi desenvolvido para gerenciar o inventário de computadores. Ele permite cadastrar, editar, listar e excluir registros de computadores.
 
 ### Funcionalidades
 
