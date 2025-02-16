@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventário de Computadores</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}">
+</head>
+<body>
+  <!-- Cabeçalho com logo e título -->
+  <header>
+    <div class="header-container">
+      <!-- Ajuste o caminho da imagem da sua logo -->
+      <img src="{{ url_for('static', filename='img/bliss.png') }}" alt="Logo da Empresa" class="logo">
+
+      <h1>Inventário de Computadores</h1>
+    </div>
+  </header>
+
+  <!-- Seção de Busca -->
+  <section id="busca">
+    <h2>Buscar Computador</h2>
+    <input type="text" id="campo-busca" placeholder="Buscar por nome, fabricante, modelo, serial ou setor...">
+    <button id="btn-busca">Buscar</button>
+  </section>
+
+  <!-- Seção de Cadastro/Atualização -->
+  <section id="cadastro">
+    <h2>Adicionar/Editar Computador</h2>
+    <!-- Campo oculto para armazenar o id em modo edição -->
+    <input type="hidden" id="id" name="id">
+    <form id="form-cadastro">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="fabricante">Fabricante:</label>
+      <input type="text" id="fabricante" name="fabricante" required>
+
+      <label for="modelo">Modelo:</label>
+      <input type="text" id="modelo" name="modelo" required>
+
+      <label for="serial">Serial:</label>
+      <input type="text" id="serial" name="serial" required>
+
+      <label for="data_aquisicao">Data de Aquisição:</label>
+      <input type="date" id="data_aquisicao" name="data_aquisicao" required>
+
+      <label for="sistema_operacional">Sistema Operacional:</label>
+      <input type="text" id="sistema_operacional" name="sistema_operacional">
+
+      <label for="setor">Setor:</label>
+      <input type="text" id="setor" name="setor">
+
+      <button type="submit">Salvar</button>
+      <button type="button" id="btn-cancelar" style="display:none;">Cancelar Edição</button>
+    </form>
+  </section>
+
+  <!-- Seção de Listagem -->
+  <section id="lista">
+    <h2>Computadores Cadastrados</h2>
+    <!-- Contêiner para a tabela ficar rolável em telas pequenas -->
+    <div class="table-responsive">
+      <table id="tabela-computadores">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Fabricante</th>
+            <th>Modelo</th>
+            <th>Serial</th>
+            <th>Data de Aquisição</th>
+            <th>Sistema Operacional</th>
+            <th>Setor</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Os dados serão inseridos dinamicamente pelo JavaScript -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Seu script principal -->
+  <script src="{{ url_for('static', filename='script.js') }}?v=1.1"></script>
+
+</body>
+</html>

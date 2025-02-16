@@ -1,0 +1,242 @@
+/* Importa a fonte Roboto do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #f0f2f5;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* ================== CABEÇALHO ================== */
+header {
+  margin-bottom: 30px;
+}
+
+/* Container que agrupa a logo e o título lado a lado */
+.header-container {
+  display: flex;
+  align-items: center; /* Alinha verticalmente ao centro */
+  justify-content: center; /* Centraliza horizontalmente */
+}
+
+/* Estilo da logo */
+.logo {
+  width: 60px;         /* Ajuste a largura que preferir */
+  height: auto;        /* Mantém a proporção da imagem */
+  margin-right: 15px;  /* Espaço entre a logo e o título */
+}
+
+/* Título do sistema */
+header h1 {
+  font-size: 2em;
+  color: #4a90e2;
+}
+
+/* ================== SEÇÕES PADRÃO ================== */
+section {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+section h2 {
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 2px solid #4a90e2;
+  padding-bottom: 5px;
+}
+
+/* ================== SEÇÃO DE BUSCA ================== */
+#busca {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#campo-busca {
+  width: 60%;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#btn-busca {
+  padding: 10px 20px;
+  background: #4a90e2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#btn-busca:hover {
+  background: #357ABD;
+}
+
+/* ================== FORMULÁRIO ================== */
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+form input,
+form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+form input:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+}
+
+form button {
+  background: #4a90e2;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #357ABD;
+}
+
+/* ================== TABELA ================== */
+
+/* Contêiner que torna a tabela rolável em telas pequenas */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;  /* rolagem horizontal se necessário */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  min-width: 800px; /* você pode definir uma largura mínima se quiser */
+}
+
+table thead {
+  background: #4a90e2;
+  color: #fff;
+}
+
+table thead th {
+  padding: 12px;
+  text-align: left;
+}
+
+table tbody tr {
+  border-bottom: 1px solid #ddd;
+  transition: background 0.3s;
+}
+
+table tbody tr:hover {
+  background: #f9f9f9;
+}
+
+table tbody td {
+  padding: 12px;
+  vertical-align: middle;
+}
+
+/* Botões de ação na tabela */
+.btn-action {
+  padding: 6px 12px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  transition: background 0.3s;
+}
+
+.btn-edit {
+  background: #f0ad4e;
+}
+
+.btn-edit:hover {
+  background: #ec971f;
+}
+
+.btn-delete {
+  background: #d9534f;
+}
+
+.btn-delete:hover {
+  background: #c9302c;
+}
+
+/* ================== MEDIA QUERIES ================== */
+/* Ajustes adicionais para telas menores (por exemplo, abaixo de 768px) */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.6em;
+  }
+
+  /* Campo de busca e botão ficam mais amigáveis */
+  #campo-busca {
+    width: 70%;
+    margin-bottom: 10px;
+  }
+  #btn-busca {
+    width: auto;
+    margin-bottom: 10px;
+  }
+
+  /* Aumenta o espaçamento entre inputs do formulário no mobile */
+  form label {
+    margin-top: 10px;
+  }
+}
+
+/* Ainda menor, por exemplo abaixo de 480px */
+@media (max-width: 480px) {
+  .header-container {
+    flex-direction: column; /* Logo e título ficam empilhados */
+  }
+
+  .logo {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  header h1 {
+    text-align: center;
+    font-size: 1.4em;
+  }
+
+  #campo-busca {
+    width: 100%;
+    margin-right: 0;
+  }
+  #btn-busca {
+    display: block;
+    width: 100%;
+  }
+
+  /* Se quiser forçar a tabela a encolher ainda mais, 
+     você pode remover ou reduzir o min-width. */
+  table {
+    min-width: 600px; /* ou pode até remover esse min-width */
+  }
+}
