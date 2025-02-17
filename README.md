@@ -1,5 +1,5 @@
 # Inventário de Computadores
-
+Caso tente abrir pelo celular, alguns navegadores podem forçar HTTPS automaticamente e impedir o acesso. Se isso acontecer, sugiro abrir no computador, onde o acesso funciona normalmente via HTTP.
 ## Descrição
 
 Este sistema foi desenvolvido para gerenciar o inventário de computadores. Ele permite cadastrar, editar, listar e excluir registros de computadores.
