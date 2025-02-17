@@ -1,7 +1,7 @@
-/* Importa a fonte Roboto do Google Fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* Reset básico */
+
 * {
   margin: 0;
   padding: 0;
@@ -24,15 +24,15 @@ header {
 /* Container que agrupa a logo e o título lado a lado */
 .header-container {
   display: flex;
-  align-items: center; /* Alinha verticalmente ao centro */
-  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; 
+  justify-content: center; 
 }
 
 /* Estilo da logo */
 .logo {
-  width: 60px;         /* Ajuste a largura que preferir */
-  height: auto;        /* Mantém a proporção da imagem */
-  margin-right: 15px;  /* Espaço entre a logo e o título */
+  width: 60px;         
+  height: auto;        
+  margin-right: 15px;  
 }
 
 /* Título do sistema */
@@ -125,14 +125,14 @@ form button:hover {
 /* Contêiner que torna a tabela rolável em telas pequenas */
 .table-responsive {
   width: 100%;
-  overflow-x: auto;  /* rolagem horizontal se necessário */
+  overflow-x: auto;  
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
-  min-width: 800px; /* você pode definir uma largura mínima se quiser */
+  min-width: 800px; 
 }
 
 table thead {
@@ -193,7 +193,7 @@ table tbody td {
     font-size: 1.6em;
   }
 
-  /* Campo de busca e botão ficam mais amigáveis */
+  
   #campo-busca {
     width: 70%;
     margin-bottom: 10px;
@@ -203,16 +203,16 @@ table tbody td {
     margin-bottom: 10px;
   }
 
-  /* Aumenta o espaçamento entre inputs do formulário no mobile */
+  
   form label {
     margin-top: 10px;
   }
 }
 
-/* Ainda menor, por exemplo abaixo de 480px */
+
 @media (max-width: 480px) {
   .header-container {
-    flex-direction: column; /* Logo e título ficam empilhados */
+    flex-direction: column; 
   }
 
   .logo {
@@ -234,9 +234,8 @@ table tbody td {
     width: 100%;
   }
 
-  /* Se quiser forçar a tabela a encolher ainda mais, 
-     você pode remover ou reduzir o min-width. */
+ 
   table {
-    min-width: 600px; /* ou pode até remover esse min-width */
+    min-width: 600px; 
   }
 }
