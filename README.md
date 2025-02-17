@@ -1,5 +1,7 @@
 # Inventário de Computadores
-Caso tente abrir pelo celular, alguns navegadores podem forçar HTTPS automaticamente e impedir o acesso. Se isso acontecer, sugiro abrir no computador, onde o acesso funciona normalmente via HTTP.
+Caso tente abrir o sistema pelo celular, alguns navegadores podem forçar o uso de HTTPS automaticamente, o que pode impedir o acesso.
+Se isso acontecer, basta editar a URL no navegador e remover o "s" de "https", acessando o sistema via HTTP.
+No computador, o acesso funciona normalmente sem essa necessidade..
 ## Descrição
 
 Este sistema foi desenvolvido para gerenciar o inventário de computadores. Ele permite cadastrar, editar, listar e excluir registros de computadores.
