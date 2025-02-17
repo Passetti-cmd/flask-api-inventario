@@ -7,27 +7,27 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}">
 </head>
 <body>
-  <!-- Cabeçalho com logo e título -->
+  <!-- Inicio Começo do body -->
   <header>
     <div class="header-container">
-      <!-- Ajuste o caminho da imagem da sua logo -->
+      <!-- Logo BLiss -->
       <img src="{{ url_for('static', filename='img/bliss.png') }}" alt="Logo da Empresa" class="logo">
 
       <h1>Inventário de Computadores</h1>
     </div>
   </header>
 
-  <!-- Seção de Busca -->
+  
   <section id="busca">
     <h2>Buscar Computador</h2>
     <input type="text" id="campo-busca" placeholder="Buscar por nome, fabricante, modelo, serial ou setor...">
     <button id="btn-busca">Buscar</button>
   </section>
 
-  <!-- Seção de Cadastro/Atualização -->
+  
   <section id="cadastro">
     <h2>Adicionar/Editar Computador</h2>
-    <!-- Campo oculto para armazenar o id em modo edição -->
+    
     <input type="hidden" id="id" name="id">
     <form id="form-cadastro">
       <label for="nome">Nome:</label>
@@ -56,10 +56,10 @@
     </form>
   </section>
 
-  <!-- Seção de Listagem -->
+  <!-- LISTA -->
   <section id="lista">
     <h2>Computadores Cadastrados</h2>
-    <!-- Contêiner para a tabela ficar rolável em telas pequenas -->
+    <!-- Ajuste telas pequenas celulares -->
     <div class="table-responsive">
       <table id="tabela-computadores">
         <thead>
@@ -76,13 +76,13 @@
           </tr>
         </thead>
         <tbody>
-          <!-- Os dados serão inseridos dinamicamente pelo JavaScript -->
+          
         </tbody>
       </table>
     </div>
   </section>
 
-  <!-- Seu script principal -->
+  <!-- link js  -->
   <script src="{{ url_for('static', filename='script.js') }}?v=1.1"></script>
 
 </body>
