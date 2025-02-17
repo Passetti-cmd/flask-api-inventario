@@ -2,11 +2,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("form-cadastro");
     const btnCancelar = document.getElementById("btn-cancelar");
   
-    // Substitua pela URL da sua API Flask caso precise rodar externamente
+
     const BASE_URL = "http://flask-env.eba-pimaq7yt.sa-east-1.elasticbeanstalk.com";
 
   
-    // Função para carregar os computadores, opcionalmente com um termo de busca
+
     function carregarComputadores(busca = '') {
       let url = `${BASE_URL}/computadores`;
       if (busca) {
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch(err => console.error("Erro ao buscar dados:", err));
     }
   
-    // Função para carregar os dados de um computador no formulário para edição
+    
     function editarFormulario(id) {
       // Agora buscamos diretamente pelo endpoint /computadores/<id>, que retorna 1 objeto
       fetch(`${BASE_URL}/computadores/${id}`)
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch(err => console.error("Erro ao carregar dados para edição:", err));
     }
   
-    // Função para enviar dados para cadastrar ou editar um computador
+    
     form.addEventListener("submit", event => {
       event.preventDefault();
   
@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
       };
   
       if (id) {
-        // Se houver um id, atualiza (PUT)
+        
         fetch(`${BASE_URL}/computadores/${id}`, {
           method: "PUT",
           headers: {
@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch(err => console.error("Erro ao atualizar:", err));
       } else {
-        // Caso contrário, cria (POST)
+        
         fetch(`${BASE_URL}/computadores`, {
           method: "POST",
           headers: {
@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
       carregarComputadores(termoBusca);
     });
   
-    // Carrega os computadores ao iniciar a página
+    
     carregarComputadores();
   });
   
