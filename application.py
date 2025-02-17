@@ -44,10 +44,10 @@ def init_db():
     except Exception as e:
         print("Erro ao inicializar o banco:", e)
 
-# Função para conectar ao banco de dados
+
 def get_db_connection():
     conn = sqlite3.connect(DB_NAME)
-    conn.row_factory = sqlite3.Row  # Permite acessar os resultados como dicionário
+    conn.row_factory = sqlite3.Row  
     return conn
 
 from flask import render_template
