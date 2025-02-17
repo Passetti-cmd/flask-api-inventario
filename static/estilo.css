@@ -16,7 +16,7 @@ body {
   padding: 20px;
 }
 
-/* ================== CABEÇALHO ================== */
+/*cabeçalho */
 header {
   margin-bottom: 30px;
 }
@@ -28,20 +28,20 @@ header {
   justify-content: center; 
 }
 
-/* Estilo da logo */
+
 .logo {
   width: 60px;         
   height: auto;        
   margin-right: 15px;  
 }
 
-/* Título do sistema */
+/* Título*/
 header h1 {
   font-size: 2em;
   color: #4a90e2;
 }
 
-/* ================== SEÇÕES PADRÃO ================== */
+
 section {
   background: #fff;
   border-radius: 8px;
@@ -57,7 +57,7 @@ section h2 {
   padding-bottom: 5px;
 }
 
-/* ================== SEÇÃO DE BUSCA ================== */
+/*BUSCA POR PCS  */
 #busca {
   text-align: center;
   margin-bottom: 20px;
@@ -85,7 +85,7 @@ section h2 {
   background: #357ABD;
 }
 
-/* ================== FORMULÁRIO ================== */
+/*FORMULÁRIO  */
 form label {
   display: block;
   margin-bottom: 5px;
@@ -120,9 +120,9 @@ form button:hover {
   background: #357ABD;
 }
 
-/* ================== TABELA ================== */
+/* TABELA */
 
-/* Contêiner que torna a tabela rolável em telas pequenas */
+/* tabela rolável em telas pequenas */
 .table-responsive {
   width: 100%;
   overflow-x: auto;  
@@ -186,8 +186,7 @@ table tbody td {
   background: #c9302c;
 }
 
-/* ================== MEDIA QUERIES ================== */
-/* Ajustes adicionais para telas menores (por exemplo, abaixo de 768px) */
+/*para telas menores*/
 @media (max-width: 768px) {
   header h1 {
     font-size: 1.6em;
