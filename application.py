@@ -1,5 +1,5 @@
 import os
-import sqlite3  # Correção do erro de importação
+import sqlite3  
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
@@ -19,14 +19,14 @@ CORS(app, origins=["http://flask-env.eba-pimaq7yt.sa-east-1.elasticbeanstalk.com
 
 
 
-# Nome do banco de dados SQLite (será salvo como um arquivo local)
+
 DB_NAME = "inventario.db"
 
-# Função para inicializar o banco de dados
+
 def init_db():
     try:
         with sqlite3.connect(DB_NAME) as conn:
-            cursor = conn.cursor()  # Criar cursor corretamente antes de executar SQL
+            cursor = conn.cursor()  
             cursor.execute("""
                 CREATE TABLE IF NOT EXISTS computadores (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -63,7 +63,7 @@ def listar_computadores():
     try:
         busca = request.args.get('busca', '')
         conn = get_db_connection()
-        cursor = conn.cursor()  # Criar cursor antes de executar comandos SQL
+        cursor = conn.cursor()  
 
         if busca:
             wildcard = f"%{busca}%"
