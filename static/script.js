@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
     
     function editarFormulario(id) {
-      // Agora buscamos diretamente pelo endpoint /computadores/<id>, que retorna 1 objeto
+      // buscar diretamente pelo endpoint /computadores/<id>
       fetch(`${BASE_URL}/computadores/${id}`)
         .then(response => response.json())
         .then(comp => {
@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
       btnCancelar.style.display = "none";
     });
   
-    // Função para excluir um computador
+    //para excluir um computador
     function excluirComputador(id) {
       fetch(`${BASE_URL}/computadores/${id}`, {
         method: "DELETE"
